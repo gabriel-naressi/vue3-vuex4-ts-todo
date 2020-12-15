@@ -5,7 +5,6 @@
   </ul>
 </template>
 <script lang="ts">
-import { Todo } from "@/types/Todo";
 import { useStore } from "../store";
 import { computed } from "vue";
 export default {
@@ -14,8 +13,8 @@ export default {
     return {
       //Poderia também ser: computed(() => store.state.todos), qual a diferença?
       todos: computed(() => store.getters.getTodos),
-      todoCount: computed(() => store.getters.todoCount),
+      todoCount: computed(() => store.getters.todoCount)
     };
-  },
+  }
 };
 </script>

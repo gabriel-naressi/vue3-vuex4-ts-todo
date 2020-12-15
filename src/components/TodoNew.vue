@@ -3,7 +3,7 @@
 </template>
 <script lang="ts">
 import { Todo } from "@/types/Todo";
-import { store, useStore } from "../store";
+import { useStore } from "../store";
 
 export default {
   setup() {
@@ -15,8 +15,8 @@ export default {
         //Dispatch to action addTodo
         store.dispatch("addTodo", todo);
         id++;
-      },
+      }
     };
-  },
+  }
 };
 </script>
