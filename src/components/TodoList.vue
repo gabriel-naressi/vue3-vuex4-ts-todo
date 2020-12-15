@@ -14,6 +14,7 @@ export default {
       //Poderia também ser: computed(() => store.state.todos), qual a diferença?
       todos: computed(() => store.getters.getTodos),
       todoCount: computed(() => store.getters.todoCount)
+      //Poderia ter dispatchs aqui, sem problemas: increment: () => store.dispatch('increment'),
     };
   }
 };

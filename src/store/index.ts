@@ -9,6 +9,7 @@ export interface State {
 export const key: InjectionKey<Store<State>> = Symbol();
 
 export const store = createStore<State>({
+  strict: process.env.NODE_ENV !== "production",
   //Actions aways commit and trigger a mutation. Actions are functions that cause side effects and can involve asynchronous
   //operations.
   actions: {
